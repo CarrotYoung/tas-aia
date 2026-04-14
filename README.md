@@ -1,37 +1,30 @@
 # AI Skills 驱动的对话式表单生成系统
 
-## Step 1 - 项目整体结构
+## 当前进度（Step 2）
 
-本仓库采用前后端分离结构：
+已完成前后端可运行骨架代码：
 
-- `backend/`：Spring Boot + Spring AI Alibaba + MyBatis Plus
-- `frontend/`：Vue3 + Pinia + SSE/fetch stream
-- `docs/`：设计与接口文档
+- `backend/`：Spring Boot API（skills/chat stream/validate/save/detail）
+- `frontend/`：Vue3 + Pinia 双栏页面（对话区 + 表单区）
+- `docs/`：架构说明
 
-## 目录草图
+## 启动方式
 
-```text
-backend/
-  src/main/java/com/example/aia/
-    config/
-    controller/
-    dto/
-    engine/
-    entity/
-    mapper/
-    service/
-      impl/
-    tool/
-    validator/
-  src/main/resources/
-frontend/
-  src/
-    api/
-    components/
-    store/
-    views/
-    types/
-    utils/
-  public/
-docs/
+### 后端
+
+```bash
+cd backend
+mvn spring-boot:run
 ```
+
+默认端口：`8080`
+
+### 前端
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+默认端口：`5173`（已代理 `/api` 到后端）
